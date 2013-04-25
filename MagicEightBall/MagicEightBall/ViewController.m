@@ -31,6 +31,6 @@
 
 - (IBAction)shake:(id)sender
 {
-    answerLabel.text = @"needs work!";
+    answerLabel.text = @"needs work!"; // add your code here.  Call a method on your class that returns one of several random strings.
 }
 @end
