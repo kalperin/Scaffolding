@@ -11,7 +11,9 @@
 @interface ViewController ()
 {
     __weak IBOutlet UITextField *inputTextField;
-    __weak IBOutlet UILabel *palindroneLabel;
+    __weak IBOutlet UILabel *resultLabel;
+    
+    int result;
 }
 - (IBAction)check:(id)sender;
 
@@ -33,27 +35,56 @@
 
 -(void)showIsPalindrone
 {
-    palindroneLabel.text = @"Not a palindrone!";
+    resultLabel.text = @"Not a palindrone!";
 }
 
 -(void)showIsNotPalindrone
 {
-    palindroneLabel.text = @"IS a palindrone!";
+    resultLabel.text = @"IS a palindrone!";
 }
 
-- (IBAction)check:(id)sender
+
+-(const char*)getCharacterArray
 {
-    const char* arrayOfCharacters = [inputTextField.text UTF8String];
+    return [inputTextField.text UTF8String];
+}
+
+
+-(void)showResult
+{
+    resultLabel.text = [NSString stringWithFormat:@"%i", result];
+}
+
+
+-(void)checkForPalindrone
+{
+    const char* arrayOfCharacters = [self getCharacterArray];
     BOOL isPalindrome = NO;
     
     
-    // Insert code in here to check the characters of the array
+    // Insert code in here to check the characters of the array for palindronishness
+    
     
     if (isPalindrome) {
         [self showIsPalindrone];
     }
     else{
         [self showIsPalindrone];
-    }
+    }    
+}
+
+
+-(void)sumIntegers
+{
+    const char* arrayOfCharacters = [self getCharacterArray];
+    
+    // parse out the commas, sum up the integers and assign the answer to the variable result
+    // i.e.
+    // result = 
+}
+
+- (IBAction)check:(id)sender
+{
+    [self checkForPalindrone];
 }
 @end
