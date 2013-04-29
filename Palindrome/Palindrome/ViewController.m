@@ -56,7 +56,7 @@
 }
 
 
--(void)checkForPalindrone
+-(void)checkForPalindrome
 {
     const char* arrayOfCharacters = [self getCharacterArray];
     BOOL isPalindrome = NO;
@@ -85,6 +85,6 @@
 
 - (IBAction)check:(id)sender
 {
-    [self checkForPalindrone];
+    [self checkForPalindrome];
 }
 @end
