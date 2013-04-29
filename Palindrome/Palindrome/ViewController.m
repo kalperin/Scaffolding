@@ -80,11 +80,16 @@
     
     // parse out the commas, sum up the integers and assign the answer to the variable result
     // i.e.
-    // result = 
+    // result =
+    
+    [self showResult];
 }
 
 - (IBAction)check:(id)sender
 {
     [self checkForPalindrome];
+    
+    // Uncomment the following line of code and comment out the previous line of code to run summation
+    //[self sumIntegers];
 }
 @end
